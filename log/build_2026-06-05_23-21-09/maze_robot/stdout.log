@@ -1,0 +1,26 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/perception_node.dir/src/perception_node.cpp.o[0m
+[ 75%] Built target navigation_node
+[100%] [32m[1mLinking CXX executable perception_node[0m
+[100%] Built target perception_node
+-- Install configuration: ""
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/lib/maze_robot/navigation_node
+-- Set non-toolchain portion of runtime path of "/home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/lib/maze_robot/navigation_node" to ""
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/lib/maze_robot/perception_node
+-- Set non-toolchain portion of runtime path of "/home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/lib/maze_robot/perception_node" to ""
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/launch
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/launch/maze.launch.py
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/ament_index/resource_index/package_run_dependencies/maze_robot
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/ament_index/resource_index/parent_prefix_path/maze_robot
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/ament_prefix_path.sh
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/ament_prefix_path.dsv
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/path.sh
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/path.dsv
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.bash
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.sh
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.zsh
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.dsv
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/package.dsv
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/ament_index/resource_index/packages/maze_robot
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/cmake/maze_robotConfig.cmake
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/cmake/maze_robotConfig-version.cmake
+-- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/package.xml

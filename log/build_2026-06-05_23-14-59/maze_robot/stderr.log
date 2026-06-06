@@ -1,0 +1,7 @@
+[01m[K/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_robot/src/perception_node.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.h: Arquivo ou diretório inexistente
+    4 | #include [01;31m[K<cv_bridge/cv_bridge.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/perception_node.dir/build.make:76: CMakeFiles/perception_node.dir/src/perception_node.cpp.o] Erro 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/perception_node.dir/all] Erro 2
+gmake: *** [Makefile:146: all] Erro 2

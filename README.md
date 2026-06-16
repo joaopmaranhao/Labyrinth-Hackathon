@@ -142,7 +142,7 @@ source install/setup.bash
 ### Run
 
 ```bash
-ros2 launch maze_bringup maze.launch.py
+ros2 launch robot_ras_ros maze.launch.py
 ```
 
 ---

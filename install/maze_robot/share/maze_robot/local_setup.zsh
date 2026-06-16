@@ -1,1 +1,0 @@
-/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot/ament_cmake_environment_hooks/local_setup.zsh

@@ -43,7 +43,77 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE DIRECTORY FILES
+    "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/urdf"
+    "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/launch"
+    "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/worlds"
+    "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/params"
+    "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/rviz"
+    "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/models"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/package.xml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_ras_ros")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_ras_ros")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros/environment" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros/environment" TYPE FILE FILES "/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros/environment" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_index/share/ament_index/resource_index/packages/robot_ras_ros")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros/cmake" TYPE FILE FILES
+    "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_core/robot_ras_rosConfig.cmake"
+    "/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_core/robot_ras_rosConfig-version.cmake"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_ras_ros" TYPE FILE FILES "/home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

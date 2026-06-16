@@ -6,7 +6,7 @@ from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    pkg_name = 'robot_ras_ros'
+    pkg_name = 'maze_bringuo'
     pkg_share = get_package_share_directory(pkg_name)
 
     # Caminho para o arquivo URDF/XACRO mestre do robô

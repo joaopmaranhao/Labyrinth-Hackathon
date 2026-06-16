@@ -1,1 +1,2 @@
-/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros/ament_cmake_environment_hooks/local_setup.dsv
+source;share/robot_ras_ros/environment/ament_prefix_path.sh
+source;share/robot_ras_ros/environment/path.sh

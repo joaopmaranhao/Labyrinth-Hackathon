@@ -1,0 +1,80 @@
+[0.019s] Invoking command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup -DCMAKE_INSTALL_PREFIX=/home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros
+[0.090s] -- The C compiler identification is GNU 13.3.0
+[0.161s] -- The CXX compiler identification is GNU 13.3.0
+[0.180s] -- Detecting C compiler ABI info
+[0.282s] -- Detecting C compiler ABI info - done
+[0.297s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.298s] -- Detecting C compile features
+[0.298s] -- Detecting C compile features - done
+[0.310s] -- Detecting CXX compiler ABI info
+[0.432s] -- Detecting CXX compiler ABI info - done
+[0.447s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.447s] -- Detecting CXX compile features
+[0.448s] -- Detecting CXX compile features - done
+[0.453s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.675s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.837s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.994s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.999s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.999s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.000s] -- Added test 'lint_cmake' to check CMake code style
+[1.002s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.005s] -- Added test 'xmllint' to check XML markup files
+[1.008s] -- Configuring done (1.0s)
+[1.012s] -- Generating done (0.0s)
+[1.014s] -- Build files have been written to: /home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros
+[1.020s] Invoked command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/joao-pedro/git/Labyrinth-Hackathon/src/maze_bringup -DCMAKE_INSTALL_PREFIX=/home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros
+[1.022s] Invoking command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros -- -j8 -l8
+[1.069s] Invoked command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros -- -j8 -l8
+[1.082s] Invoking command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros
+[1.091s] -- Install configuration: ""
+[1.092s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf
+[1.092s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/lidar.xacro
+[1.092s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/chassis.xacro
+[1.092s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/robot.urdf.xacro
+[1.093s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/roda_boba.xacro
+[1.093s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/propriedades.xacro
+[1.093s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/roda.xacro
+[1.093s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/camera.xacro
+[1.094s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/gazebo_elementos.xacro
+[1.094s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/urdf/materiais.xacro
+[1.094s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/launch
+[1.094s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/launch/gazebo.launch.py
+[1.094s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/launch/spawn.launch.py
+[1.095s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/worlds
+[1.095s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/worlds/labirinth.world
+[1.095s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/worlds/hacka_labirinth.world
+[1.095s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/params
+[1.095s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/params/ros2_control.yaml
+[1.095s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/rviz
+[1.096s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/rviz/default.rviz
+[1.096s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models
+[1.096s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/walls
+[1.096s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/walls/model.config
+[1.097s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/walls/model.sdf
+[1.097s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/hacka_labirinth
+[1.097s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/hacka_labirinth/model.config
+[1.097s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/hacka_labirinth/model.sdf
+[1.098s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/labirinth
+[1.098s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/labirinth/model.config
+[1.098s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/labirinth/model.sdf
+[1.098s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/hacka_wall
+[1.098s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/hacka_wall/model.config
+[1.099s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/models/hacka_wall/model.sdf
+[1.099s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/package.xml
+[1.099s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/ament_index/resource_index/package_run_dependencies/robot_ras_ros
+[1.099s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/ament_index/resource_index/parent_prefix_path/robot_ras_ros
+[1.100s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/environment/ament_prefix_path.sh
+[1.100s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/environment/ament_prefix_path.dsv
+[1.101s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/environment/path.sh
+[1.101s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/environment/path.dsv
+[1.102s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/local_setup.bash
+[1.102s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/local_setup.sh
+[1.102s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/local_setup.zsh
+[1.103s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/local_setup.dsv
+[1.103s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/package.dsv
+[1.103s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/ament_index/resource_index/packages/robot_ras_ros
+[1.103s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/cmake/robot_ras_rosConfig.cmake
+[1.104s] -- Installing: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/cmake/robot_ras_rosConfig-version.cmake
+[1.104s] -- Up-to-date: /home/joao-pedro/git/Labyrinth-Hackathon/install/robot_ras_ros/share/robot_ras_ros/package.xml
+[1.105s] Invoked command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joao-pedro/git/Labyrinth-Hackathon/build/robot_ras_ros

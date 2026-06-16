@@ -5,10 +5,17 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# Encontra apenas o básico necessário para o gerenciamento do pacote
+# find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(gazebo_ros REQUIRED)
+find_package(robot_state_publisher REQUIRED)
+find_package(xacro REQUIRED)
+find_package(ros2_control REQUIRED)
+find_package(ros2_controllers REQUIRED)
+find_package(gazebo_ros2_control REQUIRED)
 
-# Instalação dos diretórios
+# Install packages
 install(
     DIRECTORY urdf launch worlds params rviz models
     DESTINATION share/${PROJECT_NAME}
@@ -16,8 +23,7 @@ install(
 
 install(
   FILES package.xml
-  DESTINATION share/${PROJECT_NAME}
-)
+  DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -1,41 +1,112 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess, RegisterEventHandler
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from launch.event_handlers import OnProcessExit
 
 def generate_launch_description():
-    # Nome do pacote interno atualizado
-    pkg_name = 'robot_ras_ros'
-    pkg_share = get_package_share_directory(pkg_name)
+    pkg_share = FindPackageShare(package='robot_ras_ros').find('robot_ras_ros')
+    worlds_dir = os.path.join(pkg_share, 'worlds')
+    default_world = 'labirinth.world'
     
-    # Define o caminho do arquivo de mundo correto do labirinto
-    world_file = os.path.join(pkg_share, 'worlds', 'hacka_labyrinth.world')
+    world_gazebo_arg = DeclareLaunchArgument(
+        name="world", 
+        default_value=default_world, 
+        description="Name of the Gazebo world file located in the worlds directory"
+    )
+    
+    world_gazebo_path = PathJoinSubstitution([worlds_dir, LaunchConfiguration("world")])
+    
+    world_models_path = os.path.join(pkg_share, 'models')
+    install_dir = FindPackageShare(package='robot_ras_ros').find('robot_ras_ros')
 
-    # Configura os caminhos de modelos para o Gazebo Sim encontrar as paredes
-    models_path = os.path.join(pkg_share, 'models')
-    if 'GZ_SIM_RESOURCE_PATH' in os.environ:
-        os.environ['GZ_SIM_RESOURCE_PATH'] += f":{models_path}"
-    else:
-        os.environ['GZ_SIM_RESOURCE_PATH'] = models_path
+    os.environ['GAZEBO_MODEL_PATH'] = world_models_path
+    os.environ['GAZEBO_PLUGIN_PATH'] = os.environ.get('GAZEBO_PLUGIN_PATH', '') + ':' + install_dir + '/lib'
 
-    # Inclui o Launch do próprio Gazebo Sim (Nativo e moderno para o ROS Jazzy)
-    pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')
-        ),
-        launch_arguments={'gz_args': f"-r {world_file}"}.items(),
+    print("GAZEBO MODEL PATH==", os.environ["GAZEBO_MODEL_PATH"])
+    print("GAZEBO PLUGIN PATH==", os.environ["GAZEBO_PLUGIN_PATH"])
+
+    gazebo_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(FindPackageShare("gazebo_ros").find("gazebo_ros"), "launch", "gazebo.launch.py")
+        ]),
+        launch_arguments={"world": world_gazebo_path}.items(),
     )
 
-    # Inclui o seu arquivo de spawn (que coloca o robô lá dentro)
-    spawn_robot = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_share, 'launch', 'spawn.launch.py')
-        )
+   
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+
+    xacro_file_name = 'robot.urdf.xacro'
+
+    # Caminho para o arquivo URDF/XACRO
+    xacro_file = os.path.join(pkg_share, 'urdf', xacro_file_name)
+    robot_description_config = Command(['xacro ', xacro_file, ' use_sim_time:=', use_sim_time])
+
+    # Robot State Publisher
+    robot_state_publisher_node = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        # namespace='robot_ras',
+        output='screen',
+        parameters=[{'use_sim_time': use_sim_time,
+                     'robot_description': robot_description_config}]
+    )
+
+    # Spawn do Robô no Gazebo
+    spawn_entity_node = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        arguments=['-topic', 'robot_description',
+                   '-entity', 'ras_robot', # Nome da entidade no Gazebo
+                   '-x', '0.0', # Posição inicial do robô (será sobrescrita pela pose no chassis.xacro se definida lá)
+                   '-y', '0.0',
+                   '-z', '0.0', # Ajuste conforme necessário para que o robô não caia pelo chão antes da física estabilizar
+                   '-R', '0.0', # Ajuste conforme necessário para que o robô não caia pelo chão antes da física estabilizar
+                   '-P', '0.0', # Ajuste conforme necessário para que o robô não caia pelo chão antes da física estabilizar
+                   '-Y', '0.0'],
+        output='screen'
+    )
+
+    # Carregar Controladores (JointStateBroadcaster e os de velocidade)
+    load_joint_state_broadcaster = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+             'joint_state_broadcaster'],
+        output='screen'
+    )
+
+    load_left_wheel_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'motor1'],
+        output='screen'
+    )
+    load_right_wheel_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'motor2'],
+        output='screen'
     )
 
     return LaunchDescription([
-        gazebo,
-        spawn_robot
+        world_gazebo_arg,
+        gazebo_launch,
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='true',
+            description='Use simulation (Gazebo) clock if true'),
+
+        robot_state_publisher_node,
+        spawn_entity_node,
+
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=spawn_entity_node,
+                on_exit=[
+                    load_joint_state_broadcaster,
+                    load_left_wheel_controller,
+                    load_right_wheel_controller,
+                ],
+            )
+        ),
     ])

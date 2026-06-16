@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot/navigation_node" "/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot/perception_node" "TARGETS" "navigation_node" "perception_node" "DESTINATION" "lib/maze_robot")

@@ -1,0 +1,44 @@
+[0.021s] Invoking command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/joao-pedro/git/Labyrinth-Hackathon/src/maze_robot -DCMAKE_INSTALL_PREFIX=/home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot
+[0.042s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.374s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.384s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.428s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.444s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.471s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.497s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.598s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.600s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.718s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.821s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.842s] -- Found sensor_msgs: 5.3.7 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.901s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[1.118s] -- Configuring done (1.1s)
+[1.145s] -- Generating done (0.0s)
+[1.153s] -- Build files have been written to: /home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot
+[1.164s] Invoked command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/joao-pedro/git/Labyrinth-Hackathon/src/maze_robot -DCMAKE_INSTALL_PREFIX=/home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot
+[1.165s] Invoking command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot -- -j8 -l8
+[1.248s] [ 50%] Built target navigation_node
+[1.249s] [100%] Built target perception_node
+[1.263s] Invoked command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot -- -j8 -l8
+[1.265s] Invoking command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot
+[1.275s] -- Install configuration: ""
+[1.275s] -- Execute custom install script
+[1.276s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/lib/maze_robot/navigation_node
+[1.276s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/lib/maze_robot/perception_node
+[1.277s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/launch/maze.launch.py
+[1.277s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/ament_index/resource_index/package_run_dependencies/maze_robot
+[1.277s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/ament_index/resource_index/parent_prefix_path/maze_robot
+[1.277s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/ament_prefix_path.sh
+[1.278s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/ament_prefix_path.dsv
+[1.278s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/path.sh
+[1.278s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/environment/path.dsv
+[1.278s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.bash
+[1.278s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.sh
+[1.279s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.zsh
+[1.279s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/local_setup.dsv
+[1.279s] -- Symlinking: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/package.dsv
+[1.291s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/ament_index/resource_index/packages/maze_robot
+[1.291s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/cmake/maze_robotConfig.cmake
+[1.291s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/cmake/maze_robotConfig-version.cmake
+[1.292s] -- Up-to-date symlink: /home/joao-pedro/git/Labyrinth-Hackathon/install/maze_robot/share/maze_robot/package.xml
+[1.294s] Invoked command in '/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot

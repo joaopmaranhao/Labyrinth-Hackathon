@@ -1,20 +1,27 @@
 cmake_minimum_required(VERSION 3.8)
-project(maze_bringup)
+project(robot_ras_ros)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+# Encontra apenas o básico necessário para o gerenciamento do pacote
 find_package(ament_cmake REQUIRED)
 
-# Install launch files
-install(DIRECTORY launch/
-  DESTINATION share/${PROJECT_NAME}/launch
+# Instalação dos diretórios
+install(
+    DIRECTORY urdf launch worlds params rviz models
+    DESTINATION share/${PROJECT_NAME}
 )
 
-# Install config files
-install(DIRECTORY config/
-  DESTINATION share/${PROJECT_NAME}/config
+install(
+  FILES package.xml
+  DESTINATION share/${PROJECT_NAME}
 )
+
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
 ament_package()

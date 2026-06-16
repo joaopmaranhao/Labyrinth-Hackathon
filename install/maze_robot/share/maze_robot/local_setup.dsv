@@ -1,2 +1,1 @@
-source;share/maze_robot/environment/ament_prefix_path.sh
-source;share/maze_robot/environment/path.sh
+/home/joao-pedro/git/Labyrinth-Hackathon/build/maze_robot/ament_cmake_environment_hooks/local_setup.dsv

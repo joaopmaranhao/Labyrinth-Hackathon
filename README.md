@@ -19,13 +19,13 @@ Labyrinth is a ROS2-based differential drive robot designed to solve mazes. It c
 
 ```
                     ┌─────────────────────┐
-                    │    Gazebo Sim        │
-                    │  (maze world + robot)│
+                    │   Gazebo Sim        │
+                    │ (maze world + robot)│
                     └────────┬────────────┘
                              │
               ┌──────────────┼──────────────┐
               │                             │              
-     /sensor_range/*                /frente_camera/...   
+     /sensor_range/*                  /frente_camera/...   
               │                             │                
     ┌─────────▼──────┐                  ┌───▼────────────┐ 
     │ NavigationNode │                  │ PerceptionNode │ 
@@ -57,7 +57,10 @@ Labyrinth-Hackathon/
 │   │   ├── launch/
 │   │   │   └── maze.launch.py
 │   │   ├── worlds/            # Gazebo SDF worlds
-│   │   └── models/            # Robot URDF/SDF
+│   │   ├── models/            # Robot URDF/SDF
+|   |   ├── params/            # Parameters
+|   |   ├── rviz/              
+|   |   └── urdf/              # Modelo do robô
 │   └── maze_robot/            # Core robot nodes
 │       ├── include/maze_robot/
 │       │   ├── navigation_node.hpp
@@ -121,35 +124,35 @@ Increments a counter every frame a color has more than 500 active pixels.
 
 ### Prerequisites
 
-- Ubuntu 24.04
-- ROS2 Jazzy
-- Gazebo (Harmonic)
-
-```bash
-sudo apt install ros-jazzy-cv-bridge ros-jazzy-vision-opencv ros-jazzy-ros-gz
-```
+- Ubuntu 22.04
+- ROS2 Humble
+- Gazebo 
 
 ### Build
 
 ```bash
 git clone https://github.com/BlvckJoao/Labyrinth-Hackathon.git
 cd Labyrinth-Hackathon
-source /opt/ros/jazzy/setup.bash
+source /opt/ros/humble/setup.bash
 colcon build
 source install/setup.bash
 ```
 
-### Run
+### Run simulation
 
 ```bash
-ros2 launch robot_ras_ros maze.launch.py
+ros2 launch robot_ras_ros gazebo.launch.py world:=hacka_labirinth.world
+```
+### Run robot
+```bash
+ros2 launch maze_robot maze.launch.py
 ```
 
 ---
 
 ##  Tech Stack
 
-- **ROS2 Jazzy**
+- **ROS2 Humble**
 - **Gazebo Harmonic**
 - **OpenCV 4** — HSV color segmentation
 - **cv_bridge** — ROS ↔ OpenCV image conversion
